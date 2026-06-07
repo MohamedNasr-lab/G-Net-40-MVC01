@@ -29,41 +29,81 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav m-auto mb-2 mb-lg-0 mt-3 mt-lg-0">
-                        <li class="nav-item">
-                        <li class="nav-item">
-                            <a class="nav-link active px-3 py-2 mx-2 fw-bolder fs-5" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link  px-3 py-2 mx-2 fw-bolder fs-5" aria-current="page" href="#">Members</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link  px-3 py-2 mx-2 fw-bolder fs-5" aria-current="page" href="#">Trainers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link  px-3 py-2 mx-2 fw-bolder fs-5" aria-current="page" href="#">Sessions</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link  px-3 py-2 mx-2 fw-bolder fs-5" aria-current="page" href="#">Plans</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link  px-3 py-2 mx-2 fw-bolder fs-5" aria-current="page" href="#">Memberships</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link  px-3 py-2 mx-2 fw-bolder fs-5" aria-current="page" href="#">Sessions Schedule</a>
-                        </li>
-                        <li class="nav-item">
-                            <form asp-action="Logout" asp-controller="Account" method="post" class="d-inline">
-                                <button type="submit"
-                                        class="btn btn-link nav-link px-3 py-2 mx-2 fw-bolder fs-5 text-black-alternative">
-                                    Logout
-                                </button>
-                            </form>
-                        </li>
-                    </ul>
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0 mt-3 mt-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link active px-3 py-2 mx-2 fw-bolder fs-5"
+                           asp-controller="Home"
+                           asp-action="Index">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 mx-2 fw-bolder fs-5"
+                           asp-controller="Member"
+                           asp-action="Index">
+                            Members
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 mx-2 fw-bolder fs-5"
+                           asp-controller="Trainer"
+                           asp-action="Index">
+                            Trainers
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 mx-2 fw-bolder fs-5"
+                           asp-controller="Session"
+                           asp-action="Index">
+                            Sessions
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 mx-2 fw-bolder fs-5"
+                           asp-controller="Plan"
+                           asp-action="Index">
+                            Plans
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 mx-2 fw-bolder fs-5"
+                           asp-controller="Membership"
+                           asp-action="Index">
+                            Memberships
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2 mx-2 fw-bolder fs-5"
+                           asp-controller="SessionSchedule"
+                           asp-action="Index">
+                            Sessions Schedule
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <form asp-action="Logout"
+                              asp-controller="Account"
+                              method="post"
+                              class="d-inline">
+
+                            <button type="submit"
+                                    class="btn btn-link nav-link px-3 py-2 mx-2 fw-bolder fs-5 text-black">
+                                Logout
+                            </button>
+
+                        </form>
+                    </li>
+
+                </ul>
                 </div>
-            </div>
+            
         </nav>
 
     </header>
@@ -141,6 +181,11 @@
             </div>
         </div>
     </footer>
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 
 </html>
