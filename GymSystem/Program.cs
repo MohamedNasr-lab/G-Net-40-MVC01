@@ -15,8 +15,9 @@ namespace GymSystem
             var builder = WebApplication.CreateBuilder(args);
 
             // builder.Services.AddScoped<IPlanRepository, PlanRepository>();
-            builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            //builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             builder.Services.AddScoped<IMemberServices, MemberService>();
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddDbContext<GymDbContext>(options =>
             {
                     
